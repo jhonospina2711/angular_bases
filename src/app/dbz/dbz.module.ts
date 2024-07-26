@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './pages/main-page.component';
 import { ListComponent } from './components/list/list.component';
 import { addCharacterComponent } from './components/add-character/add-character.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { addCharacterComponent } from './components/add-character/add-character.
     addCharacterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class DbzModule { }
