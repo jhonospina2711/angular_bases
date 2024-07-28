@@ -16,10 +16,14 @@ export class ListComponent {
 
   //Evento que va a emitir el indice
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter<number>();
+  public onDelete: EventEmitter<string> = new EventEmitter<string>();
 
   //Funcion que accionaa el envio
-  onDeleteCharacter(indice: number):void {
-    this.onDelete.emit(indice);
+
+
+  onDeleteCharacter(id?: string):void {
+    if ( !id) return;
+
+    this.onDelete.emit(id);
   }
 }
