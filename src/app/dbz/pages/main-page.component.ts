@@ -19,4 +19,13 @@ export class MainPageComponent {
     power: 7500
   }];
 
+  onNewCharacter( character: Character): void {
+    //Push inserta un elemento al final del arreglo characters[]
+    this.characters.push(character);
+  }
+
+  onDeleteCharacter( indice: number ): void {
+    this.characters.splice(indice, 1)
+  }
+
 }
